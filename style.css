@@ -33,8 +33,19 @@ body {
   border-top-right-radius: 10px;
   color: #fdfffc;
 }
-.stories__intro{
-    padding: 20px;
+.logo{
+    text-align: center;
+}
+.hand {
+  display: inline;
+  font-family: caveat;
+  font-size: 60px;
+}
+.logo__img{
+    margin-left: 20px;
+}
+.stories__intro {
+  padding: 20px;
 }
 .stories {
   background-color: rgb(86, 130, 89, 0.1);
@@ -49,12 +60,12 @@ body {
   height: 10vh;
   margin: 20px 0;
 }
-.hashtags button{
-    border: none;
-    background-color: black;
-    color: #fdfffc;
-    padding: 5px 5px;
-    border-radius: 5px;
+.hashtags button {
+  border: none;
+  background-color: black;
+  color: #fdfffc;
+  padding: 5px 5px;
+  border-radius: 5px;
 }
 .footer {
   position: absolute;
@@ -62,5 +73,4 @@ body {
   width: 350px;
   left: -140px;
   bottom: 180px;
-
 }
