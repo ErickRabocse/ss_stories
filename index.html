@@ -25,10 +25,30 @@
       <main class="app">
         <header class="header">
           <div class="logo">
-            <p class="hand">Stories</p>
-            <img class='logo__img' src="./img/logo.png" alt="pencil writing" width="60" />
+            <p class="hand">Short stories</p>
+            <img
+              class="logo__img"
+              src="./img/logo.png"
+              alt="pencil writing"
+              width="60"
+            />
+          </div>
+          <form action="#" class="form">
+            <textarea
+            id="textArea"
+            class="form__textarea"
+            placeholder="Start writing! 😊 Keep your story within 500 letters. Sign your story like this: #YourName. "
+            required
+            maxlength="500"
+          ></textarea>
+          <div class="form__bottom">
+            <p class="counter">500</p>
+            <button class="submit-btn">Post</button>
           </div>
         </header>
+
+          </form>
+          
         <ol class="stories">
           <p class="stories__intro">
             Stories shared
