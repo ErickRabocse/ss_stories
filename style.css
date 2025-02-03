@@ -1,0 +1,66 @@
+/* Color pallete 
+blue: #235789
+yellow: #F1D302
+white: #FDFFFC 
+green: #568259*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: montserrat;
+}
+body {
+  background-color: #edf0f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body__container {
+  width: 70%;
+  height: 90%;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(35, 87, 137, 0.1);
+}
+.header {
+  height: 250px;
+  background-image: url('./img/connected.png'),
+    linear-gradient(to right, rgb(35, 87, 137), rgb(86, 130, 89));
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #fdfffc;
+}
+.stories__intro{
+    padding: 20px;
+}
+.stories {
+  background-color: rgb(86, 130, 89, 0.1);
+  height: 700px;
+}
+.hashtags {
+  list-style: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 10vh;
+  margin: 20px 0;
+}
+.hashtags button{
+    border: none;
+    background-color: black;
+    color: #fdfffc;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+.footer {
+  position: absolute;
+  transform: rotate(-90deg);
+  width: 350px;
+  left: -140px;
+  bottom: 180px;
+
+}
