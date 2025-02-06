@@ -115,4 +115,39 @@ body {
 }
 .storyElList {
   list-style: none;
+  display: grid;
+  grid-template-columns: 40px 85px 6fr 1fr;
+  align-items: center;
+  height: 82px;
+  padding-right: 35px;
+  padding-left: 30px;
+  cursor: pointer;
+  border-top: 1px solid #e4e7eb;
+  border-bottom: 1px solid #e4e7eb;
+  transition: all 0.2s;
+  color: #3a3c42;
+}
+/* STORIES POSTS */
+.stories {
+  height: 573px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: #235789 #dbdfe4; /* Firefox */
+  scrollbar-width: thin; Firefox
+}
+.like {
+}
+.count {
+}
+.author_letter {
+}
+.capital_letter {
+}
+.text {
+}
+.author_name {
+}
+.story_posted {
+}
+.days__ago {
 }

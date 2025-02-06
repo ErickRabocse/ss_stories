@@ -16,7 +16,6 @@ textareaEl.addEventListener('input', (e) => {
   counterEl.textContent = charsLeft
 })
 // STORIES FEEDBACK COMPONENT
-
 // fn used to render list item
 const handleStoryPost = (e) => {
   e.preventDefault()
@@ -24,7 +23,18 @@ const handleStoryPost = (e) => {
   // HTML feed to be posted in the list
   const storyListEl = `
     <li class="storyElList">
-      <p>${storyEl}</p>
+      <button class="like">
+        <label classs="count">0</label>
+        <i class="fa-solid fa-star"></i>
+      </button>
+      <section class="author_letter">
+        <p class="capital_letter">A</p>
+      </section>
+      <div class="text">
+        <p class="author_name">Author</p>
+        <p class="story__posted">${storyEl}</p> 
+      </div>  
+      <p class="days__ago">Days ago</p>
     </li>
   `
   storiesFeedEl.insertAdjacentHTML('beforeend', storyListEl)
