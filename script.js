@@ -24,17 +24,17 @@ const handleStoryPost = (e) => {
   const storyListEl = `
     <li class="storyElList">
       <button class="like">
-        <label classs="count">0</label>
-        <i class="fa-solid fa-star"></i>
+        <label class="count">0</label>
+        <i class="fa-regular fa-star"></i>
       </button>
       <section class="author_letter">
         <p class="capital_letter">A</p>
       </section>
       <div class="text">
         <p class="author_name">Author</p>
-        <p class="story__posted">${storyEl}</p> 
+        <p class="story_posted">${storyEl}</p> 
       </div>  
-      <p class="days__ago">Days ago</p>
+      <p class="days__ago">123 days ago</p>
     </li>
   `
   storiesFeedEl.insertAdjacentHTML('beforeend', storyListEl)

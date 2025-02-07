@@ -18,7 +18,7 @@ body {
 }
 .body__container {
   width: 70%;
-  height: 90%;
+  height: 100%;
   margin: 20px 0;
   padding: 20px;
   border-radius: 10px;
@@ -46,6 +46,8 @@ body {
 }
 .stories__intro {
   padding: 20px;
+  border-bottom: 8px solid rgb(217, 225, 234);
+  border-top: 8px solid rgb(217, 225, 234);
 }
 .stories {
   background-color: rgb(86, 130, 89, 0.1);
@@ -116,38 +118,72 @@ body {
 .storyElList {
   list-style: none;
   display: grid;
-  grid-template-columns: 40px 85px 6fr 1fr;
+  grid-template-columns: 40px 75px 6fr 1fr;
   align-items: center;
-  height: 82px;
-  padding-right: 35px;
-  padding-left: 30px;
+  padding: 8px 30px;
   cursor: pointer;
-  border-top: 1px solid #e4e7eb;
   border-bottom: 1px solid #e4e7eb;
   transition: all 0.2s;
   color: #3a3c42;
 }
+
 /* STORIES POSTS */
 .stories {
   height: 573px;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-color: #235789 #dbdfe4; /* Firefox */
-  scrollbar-width: thin; Firefox
+  scrollbar-width: thin;
 }
+
 .like {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3px;
+  gap: 3px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.fa-star {
+  margin-bottom: 3px;
 }
 .count {
+  font-size: 0.9rem;
 }
 .author_letter {
+  display: flex;
+  justify-content: center;
 }
 .capital_letter {
+  background-color: #235789;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fdfffc;
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 3px;
 }
 .text {
+  padding: 10px;
 }
 .author_name {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  font-size: 1.2rem;
 }
 .story_posted {
+  line-height: 1.6rem;
+  letter-spacing: 1.1px;
 }
+
 .days__ago {
+  font-size: 1rem;
+  text-align: right;
 }
