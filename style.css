@@ -48,6 +48,9 @@ body {
   padding: 20px;
   border-bottom: 8px solid rgb(217, 225, 234);
   border-top: 8px solid rgb(217, 225, 234);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-style: italic;
 }
 .stories {
   background-color: rgb(86, 130, 89, 0.1);
