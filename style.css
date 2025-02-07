@@ -125,6 +125,8 @@ body {
   border-bottom: 1px solid #e4e7eb;
   transition: all 0.2s;
   color: #3a3c42;
+
+  /* transition: all 0.9s ease; */
 }
 
 /* STORIES POSTS */
@@ -171,7 +173,16 @@ body {
 }
 .text {
   padding: 10px;
+
+  /* height: 100px;
+  overflow: hidden;
+  transition: all 0.9s ease; */
 }
+/* .text:hover,
+.storyElList:hover {
+  height: auto; 
+  overflow: visible;
+} */
 .author_name {
   font-weight: bold;
   text-transform: uppercase;
