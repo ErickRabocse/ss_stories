@@ -105,9 +105,11 @@ body {
 /* VALIDITY INDICATOR */
 .valid {
   outline: 5px solid lightgreen;
+  transition: all 0.3s ease-in-out;
 }
 .invalid {
   outline: 5px solid lightcoral;
+  transition: all 0.3s ease-in-out;
 }
 
 .submit-btn {

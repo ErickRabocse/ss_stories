@@ -17,28 +17,29 @@ textareaEl.addEventListener('input', (e) => {
 })
 
 // STORIES FEEDBACK COMPONENT
+// visual indicator fn abstracted
+const visualIndicator = (textCheck) => {
+  textareaEl.classList.add(textCheck)
+  setTimeout(() => {
+    textareaEl.classList.remove(textCheck)
+  }, 2000)
+}
 // fn used to render list item
 const handleStoryPost = (e) => {
   e.preventDefault()
   const storyText = textareaEl.value
   // verification section: min-length & #
   if (storyText.includes('#') && storyText.length >= 10) {
-    textareaEl.classList.add('valid')
-    setTimeout(() => {
-      textareaEl.classList.remove('valid')
-    }, 2000)
+    visualIndicator('valid')
   } else {
-    textareaEl.classList.add('invalid')
-    setTimeout(() => {
-      textareaEl.classList.remove('invalid')
-    }, 2000)
+    visualIndicator('invalid')
     textareaEl.focus()
     return
   }
   // getting data to render in stories feed: hashtag, author name, author's 1st letter, like-counter & date
   const hashElement = storyText.split(' ').find((word) => word.includes('#'))
   const authorName = hashElement.substring(1)
-  const authorCapital = authorName.substring(0, 1)
+  const authorCapital = authorName.substring(0, 1).toUpperCase()
   const likeCount = 0
   const daysAgo = 0
 
