@@ -2,6 +2,7 @@ const textareaEl = document.querySelector('.form__textarea')
 const counterEl = document.querySelector('.counter')
 const storiesFeedEl = document.querySelector('.stories')
 const formEl = document.querySelector('.form')
+const submitBtnEl = document.querySelector(".submit-btn")
 // Global variables
 //declare max amount of letters
 const MAX_CHARS = 500
@@ -70,9 +71,14 @@ const handleStoryPost = (e) => {
     likeCount,
     daysAgo,
   }
-
   // HTML feed to be posted in the list
   renderedStoryHTML(renderedHTML)
+  // clear text area
+  textareaEl.value = ""
+  // blur submit btn
+  submitBtnEl.blur()
+  // reset counter
+  counterEl.textContent = MAX_CHARS
 }
 
 formEl.addEventListener('submit', handleStoryPost)
