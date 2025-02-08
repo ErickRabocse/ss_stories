@@ -15,11 +15,30 @@ textareaEl.addEventListener('input', (e) => {
   // updating counter
   counterEl.textContent = charsLeft
 })
+
 // STORIES FEEDBACK COMPONENT
 // fn used to render list item
 const handleStoryPost = (e) => {
   e.preventDefault()
-  const storyEl = textareaEl.value
+  const storyText = textareaEl.value
+  // verification section: min-length & #
+  if (storyText.includes('#') && storyText.length >= 10) {
+    textareaEl.classList.add('valid')
+    setTimeout(() => {
+      textareaEl.classList.remove('valid')
+    }, 2000)
+  } else {
+    textareaEl.classList.add('invalid')
+    setTimeout(() => {
+      textareaEl.classList.remove('invalid')
+    }, 2000)
+    textareaEl.focus()
+    return
+  }
+  // getting data to render in stories feed
+  const hashElement = storyText.split(' ').find((word) => word.includes('#'))
+  console.log(hashElement)
+
   // HTML feed to be posted in the list
   const storyListEl = `
     <li class="storyElList">
@@ -32,11 +51,12 @@ const handleStoryPost = (e) => {
       </section>
       <div class="text">
         <p class="author_name">Author</p>
-        <p class="story_posted">${storyEl}</p> 
+        <p class="story_posted">${storyText}</p> 
       </div>  
       <p class="days__ago">123 days ago</p>
     </li>
   `
+  //
   storiesFeedEl.insertAdjacentHTML('beforeend', storyListEl)
 }
 

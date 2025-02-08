@@ -102,6 +102,13 @@ body {
   margin: -80px 80px 0 20px;
   line-height: 2rem;
 }
+/* VALIDITY INDICATOR */
+.valid {
+  outline: 5px solid lightgreen;
+}
+.invalid {
+  outline: 5px solid lightcoral;
+}
 
 .submit-btn {
   background-color: #f8f9fa; /* Color claro */
@@ -124,12 +131,10 @@ body {
   grid-template-columns: 40px 75px 6fr 1fr;
   align-items: center;
   padding: 8px 30px;
-  cursor: pointer;
+  /* cursor: pointer; */
   border-bottom: 1px solid #e4e7eb;
   transition: all 0.2s;
   color: #3a3c42;
-
-  /* transition: all 0.9s ease; */
 }
 
 /* STORIES POSTS */
@@ -176,16 +181,8 @@ body {
 }
 .text {
   padding: 10px;
-
-  /* height: 100px;
-  overflow: hidden;
-  transition: all 0.9s ease; */
 }
-/* .text:hover,
-.storyElList:hover {
-  height: auto; 
-  overflow: visible;
-} */
+
 .author_name {
   font-weight: bold;
   text-transform: uppercase;
@@ -195,6 +192,9 @@ body {
 .story_posted {
   line-height: 1.6rem;
   letter-spacing: 1.1px;
+  /* word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal; */
 }
 
 .days__ago {
