@@ -35,25 +35,28 @@ const handleStoryPost = (e) => {
     textareaEl.focus()
     return
   }
-  // getting data to render in stories feed
+  // getting data to render in stories feed: hashtag, author name, author's 1st letter, like-counter & date
   const hashElement = storyText.split(' ').find((word) => word.includes('#'))
-  console.log(hashElement)
+  const authorName = hashElement.substring(1)
+  const authorCapital = authorName.substring(0, 1)
+  const likeCount = 0
+  const daysAgo = 0
 
   // HTML feed to be posted in the list
   const storyListEl = `
     <li class="storyElList">
       <button class="like">
-        <label class="count">0</label>
+        <label class="count">${likeCount}</label>
         <i class="fa-regular fa-star"></i>
       </button>
       <section class="author_letter">
-        <p class="capital_letter">A</p>
+        <p class="capital_letter">${authorCapital}</p>
       </section>
       <div class="text">
-        <p class="author_name">Author</p>
+        <p class="author_name">${authorName}</p>
         <p class="story_posted">${storyText}</p> 
       </div>  
-      <p class="days__ago">123 days ago</p>
+      <p class="days__ago">${daysAgo} days ago</p>
     </li>
   `
   //
