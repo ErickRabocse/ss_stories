@@ -42,22 +42,31 @@ const handleStoryPost = (e) => {
   const authorCapital = authorName.substring(0, 1).toUpperCase()
   const likeCount = 0
   const daysAgo = 0
+  // Creating object with the properties of the HTML element to be rendered.
+  const renderedHTML = {
+    storyText,
+    hashElement,
+    authorName,
+    authorCapital,
+    likeCount,
+    daysAgo,
+  }
 
   // HTML feed to be posted in the list
   const storyListEl = `
     <li class="storyElList">
       <button class="like">
-        <label class="count">${likeCount}</label>
+        <label class="count">${renderedHTML.likeCount}</label>
         <i class="fa-regular fa-star"></i>
       </button>
       <section class="author_letter">
-        <p class="capital_letter">${authorCapital}</p>
+        <p class="capital_letter">${renderedHTML.authorCapital}</p>
       </section>
       <div class="text">
-        <p class="author_name">${authorName}</p>
-        <p class="story_posted">${storyText}</p> 
+        <p class="author_name">${renderedHTML.authorName}</p>
+        <p class="story_posted">${renderedHTML.storyText}</p> 
       </div>  
-      <p class="days__ago">${daysAgo} days ago</p>
+      <p class="days__ago">${renderedHTML.daysAgo} days ago</p>
     </li>
   `
   //
