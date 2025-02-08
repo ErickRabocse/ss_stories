@@ -2,10 +2,29 @@ const textareaEl = document.querySelector('.form__textarea')
 const counterEl = document.querySelector('.counter')
 const storiesFeedEl = document.querySelector('.stories')
 const formEl = document.querySelector('.form')
+// Global variables
 //declare max amount of letters
 const MAX_CHARS = 500
-// Global variables
-
+// Abstracted HTML story-element to be rendered
+const renderedStoryHTML = (storyItem) => {
+  const storyListEl = `
+  <li class="storyElList">
+    <button class="like">
+      <label class="count">${storyItem.likeCount}</label>
+      <i class="fa-regular fa-star"></i>
+    </button>
+    <section class="author_letter">
+      <p class="capital_letter">${storyItem.authorCapital}</p>
+    </section>
+    <div class="text">
+      <p class="author_name">${storyItem.authorName}</p>
+      <p class="story_posted">${storyItem.storyText}</p> 
+    </div>  
+    <p class="days__ago">${storyItem.daysAgo} days ago</p>
+  </li>
+`
+  storiesFeedEl.insertAdjacentHTML('beforeend', storyListEl)
+}
 // INPUT COMPONENT
 textareaEl.addEventListener('input', (e) => {
   // number of characters typed in the textarea
@@ -53,24 +72,7 @@ const handleStoryPost = (e) => {
   }
 
   // HTML feed to be posted in the list
-  const storyListEl = `
-    <li class="storyElList">
-      <button class="like">
-        <label class="count">${renderedHTML.likeCount}</label>
-        <i class="fa-regular fa-star"></i>
-      </button>
-      <section class="author_letter">
-        <p class="capital_letter">${renderedHTML.authorCapital}</p>
-      </section>
-      <div class="text">
-        <p class="author_name">${renderedHTML.authorName}</p>
-        <p class="story_posted">${renderedHTML.storyText}</p> 
-      </div>  
-      <p class="days__ago">${renderedHTML.daysAgo} days ago</p>
-    </li>
-  `
-  //
-  storiesFeedEl.insertAdjacentHTML('beforeend', storyListEl)
+  renderedStoryHTML(renderedHTML)
 }
 
 formEl.addEventListener('submit', handleStoryPost)
